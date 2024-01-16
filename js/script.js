@@ -48,7 +48,7 @@ async function currentWeather(coordinates) {
 
     let cityName = $("<h2>").text(weatherData.name);
     let date = $("<p>").text(dayjs().format("MMMM D, YYYY"));
-    let icon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`);
+    let icon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`).addClass("icon");
     let temperature = $("<p>").text(`Temperature: ${weatherData.main.temp} °C`);
     let windSpeed = $("<p>").text(`Wind Speed: ${weatherData.wind.speed} m/s`);
     let humidity = $("<p>").text(`Humidity: ${weatherData.main.humidity}%`);
@@ -65,13 +65,15 @@ async function currentWeather(coordinates) {
     let forecastSection = $("#forecast");
     forecastSection.empty();
 
+
     for (let i = 7; i <= 40; i+= 8) {
         let forecastDate = dayjs.unix(forecastData.list[i].dt).format("MMMM D, YYYY");
-        let forecastIcon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${forecastData.list[i].weather[0].icon}.png`);
+        let forecastIcon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${forecastData.list[i].weather[0].icon}.png`).addClass("icon");
         let forecastTemperature = $("<p>").text(`Temperature: ${forecastData.list[i].main.temp} °C`);
         let forecastHumidity = $("<p>").text(`Humidity: ${forecastData.list[i].main.humidity}%`);
+        let forecastWind= $("<p>").text(`Wind Speed: ${forecastData.list[i].wind.speed} m/s`);
 
-        let forecastDay = $("<div>").addClass("col-md-2 forecast-day").append(forecastDate, forecastIcon, forecastTemperature, forecastHumidity);
+        let forecastDay = $("<div>").addClass("col-md-2 forecast-day").append(forecastDate, forecastIcon, forecastTemperature, forecastWind, forecastHumidity);
         forecastSection.append(forecastDay);
     }
 }

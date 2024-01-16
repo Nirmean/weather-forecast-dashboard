@@ -41,7 +41,29 @@ h1 {
 #today {
     background: var(--primary-blue);
     color: white;
+    justify-content: space-between;
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
+    background: var(--primary-blue);
+}
+
+.icon {
+    max-width: 120px;
+    margin-top: -15px;
+    text-transform: capitalize;
+    display: right; 
+}
+
+#forecast {
+    padding: 30px 0px 30px 0px;
+}
+
+.col-md-2 {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+    color: white;
 
 }
