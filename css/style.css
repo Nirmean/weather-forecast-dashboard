@@ -1,6 +1,7 @@
 :root {
     --primary-blue: #4962c7;
     --lightest-blue: #c7d4dd;
+    --dark-blue: rgb(28, 44, 84);
 }
 
 body {
@@ -12,7 +13,8 @@ h1 {
     padding: 30px;
     text-align: center;
     font-size: 1.75rem;
-    background-color: var(--primary-blue);
+    background-color: var(--dark-blue);
+    background: linear-gradient(to bottom, var(--dark-blue), var(--primary-blue));
 }
 
 .row {
@@ -63,7 +65,7 @@ h1 {
 }
 
 .col-md-2 {
-    background-color: rgb(28, 44, 84);
+    background-color: var(--dark-blue);
     display: flex;
     flex-direction: column;
     gap: 20px;
