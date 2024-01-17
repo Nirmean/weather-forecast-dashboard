@@ -23,19 +23,24 @@ h1 {
 }
 
 .col-lg-3 {
-    width: 550px;
+    width: 450px;
     margin-right: 20px;
 }
 
 .form-input {
-    width: 100%;
+    width: 93%;
     height: 45px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
 #search-button {
-    background-color: var(--primary-blue);
+    background-color: rgb(25, 135, 239);
+    outline: none;
+    border-radius: 5px;
+    padding: 2px;
+    width: 100%;
+    color: white;
 }
 
 #today {
@@ -44,7 +49,6 @@ h1 {
     justify-content: space-between;
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
-    background: var(--primary-blue);
 }
 
 .icon {
@@ -55,15 +59,27 @@ h1 {
 }
 
 #forecast {
-    padding: 30px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
 }
 
 .col-md-2 {
-    background-color: grey;
+    background-color: rgb(28, 44, 84);
     display: flex;
     flex-direction: column;
     gap: 20px;
     border-radius: 5px;
+    width: 150px;
+    padding: 20px;
     color: white;
 
+}
+
+.history-item {
+    background: rgb(180, 178, 178);
+    border-radius: 5px;
+}
+
+.fDate {
+    color: white;
+    font-weight: 300;
 }
